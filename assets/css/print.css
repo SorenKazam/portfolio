@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* PRINT CV VERSION */
+@media print {
+    section.portTitle > .info > p::after {
+        content: 'CV Printed via Tiago Guerreiro Portfolio!';  
+    }
+
+    .start {
+        display: none;
+    }
+}
