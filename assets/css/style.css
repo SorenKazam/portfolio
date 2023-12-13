@@ -40,6 +40,7 @@ section.portTitle {
     background-position: center right;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
     background-color: white;
     padding: 20px;
     text-align: center;
