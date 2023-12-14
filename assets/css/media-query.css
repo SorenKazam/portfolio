@@ -46,6 +46,10 @@
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
     }
+
+    section.container .content {
+        width: 100%;
+    }
 }
 
 /* ---------- DESKTOP VERSION ---------- */
@@ -210,6 +214,7 @@
         align-items: center;
         align-content: center;
         gap: 10px;
+        width: 100%;
     }
 
     p.regularParag {
