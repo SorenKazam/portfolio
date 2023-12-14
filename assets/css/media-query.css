@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* TABLET VERSION */
+/* ---------- TABLET VERSION ---------- */
 @media screen and (min-width: 768px) and (max-width: 992px) {
     section.portTitle {
         display: flex;
@@ -28,10 +28,29 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+    
+    /* NAVIGATION BAR */
+    #navigation {
+        display: flex;
+        position: sticky;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 10px;
+        top: 0px;
+        background-color: var(--color-primary);
+        padding: 5px;
+        transition: 0.5s;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
 }
 
-/* DESKTOP VERSION */
+/* ---------- DESKTOP VERSION ---------- */
 @media screen and (min-width: 992px) {
+    /* ---------- HEADER ---------- */
     section.portTitle {
         height: 100vh;
         display: flex;
@@ -47,7 +66,7 @@
         width: 80vw;
     }
 
-    /* NAVIGATION BAR */
+    /* ---------- NAVIGATION BAR ---------- */
     #navigation {
         display: flex;
         position: sticky;
@@ -60,19 +79,21 @@
         top: 0px;
         background-color: var(--color-primary);
         padding: 5px;
-        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.514);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.514);
         transition: 0.5s;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 
-    span#iburger {
+    #navigation span#iburger {
         display: none;
     }
 
-    menu#items {
+    #navigation menu#items {
         display: block;
     }
 
-    menu#items ul {
+    #navigation menu#items ul {
         display: flex;
         position: sticky;
         flex-direction: row;
@@ -83,7 +104,7 @@
         gap: 2px;
     }
 
-    menu#items a {
+    #navigation menu#items a {
         padding: 10px;
         text-decoration: none;
         color: white;
@@ -96,71 +117,42 @@
     main {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
         align-content: center;
     }
-
+    /* ---------- CONTAINER ---------- */
     section.container {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         align-content: center;
-        max-width: 1000px;
-        width: 70vw;
-        transition: 0.5s;
-        border: 1px solid red;
-
-        max-height: 900px;
+        gap: 0px;
+        width: 90vw;
+        max-width: 1020px;
+        border: 5px solid white;
+        border-radius: 50px;
         overflow: hidden;
+        margin: 20px;
+        box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.301);
     }
 
-    section.container .content {
-        background-color: white;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        gap: 30px;
-        border: 1px solid green;
+    section.container p {
+        font-size: 1.3em;
+        text-align: center;
+        letter-spacing: 1.5px;
+        text-indent: 15px;
+        margin: 10px;
     }
 
-    section.container .img {
-        float: right;
-        width: 100%;
-        height: 900px;
-        background-position: bottom right;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    .img1 {
-        background-image: url('../images/me/clayme2.jpeg');
-    }
-
-    .img2 {
-        background-image: url('../images/me/clayme1.jpeg');
-    }
-
-    .img3 {
-        background-image: url('../images/claygithub.jpeg');
-    }
-
-
-    .container h1 {
-        color: white;
-        background-color: var(--color-primary);
+    section.container h1 {
         font-size: 2em;
         text-align: center;
         margin-bottom: 15px;
         font-weight: bold;
-        position: static;
+        position: sticky;
         top: 65px; /* Altura da barra de navegação */
         z-index: 1;
         padding: 5px;
@@ -170,15 +162,13 @@
         max-width: 600px;
     }
 
-    .container h2 {
-        color: white;
-        background-color: var(--color-primary);
+    section.container h2 {
         font-size: 1.5em;
         text-align: center;
         margin-bottom: 10px;
         font-weight: normal;
-        position: static;
-        top: 65px; /* Altura da barra de navegação */
+        position: sticky;
+        top: 110px; /* Altura da barra de navegação */
         z-index: 1;
         padding: 5px;
         border-radius: 10px;
@@ -187,11 +177,69 @@
         max-width: 600px;
     }
 
-    .container p {
-        color: rgb(39, 39, 39);
-        font-size: 1.3em;
-        text-align: left;
-        letter-spacing: 1.5px;
-        text-indent: 15px;
+    /* ---------- CONTAINER - IMAGES ---------- */
+    section.container .img {
+        width: 100%;
+        height: 500px;
+        background-size: auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    section.container .img1 {
+        background-image: url('../images/me/clayme2.jpeg');
+    }
+
+    section.container .img2 {
+        background-image: url('../images/me/clayme1.jpeg');
+    }
+
+    section.container .img3 {
+        background-image: url('../images/claygithub.jpeg');
+    }
+
+    /* ---------- REGULAR CONTAINERS AND OBJECTS ---------- */
+    section.container .content {
+        background-color: white;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 10px;
+    }
+
+    p.regularParag {
+        color: white;  
+    }
+
+    h1.regularTitle, h2.regularSubTitle {
+        color: var(--color-primary);
+        background-color: white;
+    }
+
+    /* ---------- SOLID CONTAINERS AND OBJECTS ---------- */
+    section.container .solidContent {
+        background-color: var(--color-primary);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 10px;
+    }
+
+    p.solidParag {
+        color: var(--color-primary);  
+    }
+
+    h1.solidTitle, h2.solidSubTitle {
+        color: white;
+        background-color: var(--color-primary);
     }
 }
