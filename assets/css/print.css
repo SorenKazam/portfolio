@@ -2,11 +2,28 @@
 
 /* PRINT CV VERSION */
 @media print {
-    section.portTitle > .info > p::after {
-        content: 'CV Printed via Tiago Guerreiro Portfolio!';  
+    /* ---------- GLOBAL CONFIG ---------- */
+    body * {
+        display: none;
+        box-shadow: none !important;
     }
 
-    .start {
-        display: none;
+    /* ---------- HEADER ---------- */
+    header {
+        display: block;
     }
+
+    header .info a {
+        display: none !important;
+    }
+
+    header img, header .info, header .info h1, header .info p {
+        display: block;
+    }
+
+    header .info p::after {
+        content: ' | CV Printed via Tiago Guerreiro Portfolio!';
+    }
+
+    /* ---------- MAIN ---------- */
 }
