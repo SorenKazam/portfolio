@@ -89,30 +89,55 @@
         color: white;
         text-align: center;
         width: 100px;
-        transition: 0.2s;
+        transition: 0.5s;
     }
 
     /* MAIN */
-    section.container {
+    main {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
         align-content: center;
-        gap: 0px;
-        max-width: 800px;
-        margin: auto;
-        box-shadow: 5px 5px 10px black;
+    }
+
+    section.container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        max-width: 1000px;
+        width: 70vw;
+        transition: 0.5s;
+        border: 1px solid red;
+
+        max-height: 900px;
+        overflow: hidden;
+    }
+
+    section.container .content {
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 30px;
+        border: 1px solid green;
     }
 
     section.container .img {
+        float: right;
         width: 100%;
-        max-height: 400px;
-        background-position: top center;
+        height: 900px;
+        background-position: bottom right;
         background-size: cover;
         background-attachment: fixed;
-        box-shadow: inset 0px -5px 10px rgba(0, 0, 0, 0.308);
     }
 
     .img1 {
@@ -127,17 +152,13 @@
         background-image: url('../images/claygithub.jpeg');
     }
 
-    section.container .content {
-        background-color: white;
-        width: 100%;
-    }
 
     .container h1 {
         color: white;
         background-color: var(--color-primary);
         font-size: 2em;
         text-align: center;
-        margin: 20px;
+        margin-bottom: 15px;
         font-weight: bold;
         position: static;
         top: 65px; /* Altura da barra de navegação */
@@ -145,6 +166,8 @@
         padding: 5px;
         border-radius: 10px;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.301);
+        width: 100%;
+        max-width: 600px;
     }
 
     .container h2 {
@@ -152,64 +175,23 @@
         background-color: var(--color-primary);
         font-size: 1.5em;
         text-align: center;
-        margin: auto;
-        font-weight: lighter;
-        width: 300px;
+        margin-bottom: 10px;
+        font-weight: normal;
         position: static;
-        top: 110px; /* Altura da barra de navegação */
+        top: 65px; /* Altura da barra de navegação */
         z-index: 1;
         padding: 5px;
         border-radius: 10px;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.301);
+        width: 60%;
+        max-width: 600px;
     }
 
-    section.container p {
+    .container p {
         color: rgb(39, 39, 39);
         font-size: 1.3em;
         text-align: left;
         letter-spacing: 1.5px;
         text-indent: 15px;
-    }
-
-    .info {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .info > .languages-tools-list {
-        margin: 35px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        align-content: center;
-        gap: 30px;
-    }
-
-    .emoji {
-        width: 70px;
-        height: 200px;
-    }
-
-    .github-status {
-        width: 100%;
-    }
-
-    .btn-primary {
-        color: white;
-        background-color: var(--color-primary);
-        font-size: 1.2em;
-        text-align: center;
-        
-        font-weight: lighter;
-
-        
-        
-        
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.301);
-        
     }
 }
