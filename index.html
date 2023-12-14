@@ -106,7 +106,8 @@
                     <input type="text" name="name" id="iname" required>
                     <label for="iemail">Your email:</label>
                     <input type="email" name="email" placeholder="Email Address" required>
-                    <button type="submit">Send</button>
+                    <button type="submit" >Send</button>
+                    <span style="display: none;" id="loadingSpan">Sending...</span>
                 </form>
                 </div>
             </section>
@@ -150,6 +151,15 @@
                 items.style.display = 'none'
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const loadingContainer = document.getElementById('loadingSpan');
+
+        // Simular um atraso para demonstrar o modo de carregamento
+        setTimeout(function () {
+            loadingContainer.style.display = 'flex'; // Exibir o contêiner de carregamento
+        }, 2000); // Tempo de atraso em milissegundos (2 segundos neste exemplo)
+        });
     </script>
 </body>
 </html>
