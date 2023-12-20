@@ -24,12 +24,16 @@
                 <h1>TIAGO GUERREIRO</h1>
                 <hr>
                 <p>FULL-STACK DEVELOPER</p>
-                <a class="start" href="#navigation">START</a>
+                <a class="start" href="#mainContent" onclick="showScrollBar()">START</a>
             </section>
         </section>
     </header>
     <nav id="navigation">
-        <span id="iburger" class="material-symbols-rounded" onclick="clickMenu()">menu</span>
+        <section class="miniProfile" id="miniProfile" onclick="clickMenu()">
+            <img src="assets/images/pfp-full.jpg" alt="My profile photo!" id="miniProfileInfoImage">
+            <h1 id="miniProfileInfoName">Tiago Guerreiro</h1>
+            <span id="iburger" class="material-symbols-rounded">menu</span>
+        </section>
         <menu id="items">
             <ul class="list">
                 <li><a href="#home">Home</a></li>
@@ -39,17 +43,8 @@
             </ul>
         </menu>
     </nav>
-    <main>
+    <main id="mainContent">
         <!-- 
-            -- NOME
-            -- FOTO: Adicionar uma foto profissional sua pode criar uma conexão mais pessoal. Certifique-se de que seja uma foto adequada para um contexto profissional.
-            -- TIPO DE PROGRAMADOR
-            
-            --APRESENTACAO BASICA
-
-            Objetivo Profissional:
-            Considere adicionar uma seção de "Objetivo Profissional" logo após a apresentação básica. Isso pode destacar seus objetivos específicos como desenvolvedor, suas aspirações e o tipo de projetos que você procura.
-            
             Experiência:
             Forneça detalhes específicos sobre os projetos em que trabalhou como freelancer, destacando conquistas e tecnologias usadas.
             Se possível, adicione resultados mensuráveis (por exemplo, "Aumentou a eficiência do sistema em X%").
@@ -62,34 +57,88 @@
             Certifique-se de incluir datas para seus cursos e certificações.
             Considere remover o curso da escola secundária, a menos que tenha relevância direta para a sua carreira atual.
         
-            Tecnologias:
-            Considere adicionar níveis de proficiência para cada tecnologia (por exemplo, HTML5 - Avançado, React - Intermediário).
-            
-            Design:
-            Certifique-se de que o design do seu portfólio seja limpo e fácil de ler, mesmo quando impresso. A formatação para impressão é uma excelente ideia.
-            
             Contato:
             Certifique-se de que todos os seus links (Portfolio, GitHub, Contato) estejam corretos e funcionando.
             
             Adaptabilidade:
             Considere tornar seu portfólio mais adaptável, para que você possa facilmente adicionar ou remover projetos à medida que ganha mais experiência.
          -->
+         <div class="container" id="welcome">
+            <section class="titles">
+                <h1>Welcome</h1>
+                <h2>This is my Portfolio!</h2>
+            </section>
+            <section class="content">
+                <p>🚀 Passionate Developer | Full-Stack Enthusiast</p>
+                <p>Hello there! I'm a 24-year-old developer from Portugal with an unbridled passion for technology. Currently, I'm wholeheartedly dedicated to following a full-stack development roadmap.</p>
+                <img src="assets/images/me/clayme1.jpeg" alt="me in claymotion">
+            </section>
+        </div>
+
+        <div class="container" id="about">
+            <section class="titles">
+                <h1>About me</h1>
+                <h2>Some details about me</h2>
+            </section>
+            <section class="content">
+                <p>Real name: Tiago Guerreiro</p>
+                <p>Location: Portugal</p>
+                <p>Age: <span id="dynamicAge"></span></p>
+            </section>
+        </div>
         
+        <div class="container" id="techs">
+            <section class="titles">
+                <h1>🛠️ Tech Stack</h1>
+                <h2>This is some of the technologies I use daily!</h2>
+            </section>
+            <section class="content">
+                <section class="centerStuff">
+                    <img id="html5" class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/html5/html5-original.svg" alt="HTML5">
+                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/css3/css3-original.svg" alt="CSS3">
+                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/javascript/javascript-original.svg" alt="JS">
+                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/react/react-original.svg" alt="REACT">
+                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/tailwindcss/tailwindcss-plain.svg" alt="TAILWINDCSS">
+                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/nodejs/nodejs-original.svg" alt="NODEJS">
+                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/python/python-original.svg" alt="PYTHON">
+                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/php/php-original.svg" alt="PHP">
+                </section>
+            </section>
+        </div>
+
+        <div class="container" id="contact">
+            <section class="titles">
+                <h1>Reach me</h1>
+            </section>
+            <section class="content">
+                <p>My Links:</p>
+                <section class="centerStuff">
+                    <a href="https://github.com/SorenKazam" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/tiago-guerreiro-854a04123/" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://www.threads.net/@tiaguel" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-threads.png" alt="Threads"></a>
+                    <a href="https://www.instagram.com/tiaguel/" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-instagram.png" alt="Instagram"></a>
+                </section>
+                <p>Or via form!</p>
+                <form action="https://formsubmit.co/tiago.guerreiro8957@protonmail.com" method="POST" class="contact" autocomplete="on">
+                    <input type="hidden" name="_subject" value="Email from portfolio">
+                    <input type="hidden" name="_next" value="https://sorenkazam.github.io/portfolio/pages/thankyou.html">
+                    <label for="inome">Name</label>
+                    <input type="text" name="name" id="iname" required autocomplete="name">
+                    <label for="iemail">Email</label>
+                    <input type="email" name="email" id="iemail" required autocomplete="email">
+                    <label for="imessage">Message</label>
+                    <textarea name="message" id="imessage" cols="30" rows="10" required></textarea>
+                    <section class="actionButtons">
+                        <input type="reset" value="Reset" class="button button-reset">
+                        <button type="submit" class="button button-primary">Send</button>
+                    </section>
+               </form>
+            </section>
+        </div>
     </main>
     <footer>
         <section class="information">
-            <p>Tiago Guerreiro / A.k.a Soren | Portfolio &copy; 2023 - <span id="currentYear"></span></p>
-        </section>
-        <section class="links">
-            <a href="#" target="_blank"><img src="assets/icons/social/icon-github.png" alt="Github"></a>
-
-            <a href="#" target="_blank"><img src="assets/icons/social/icon-linkedin.png" alt="Linkedin"></a>
-
-            <a href="#" target="_blank"><img src="assets/icons/social/icon-instagram.png" alt="Instagram"></a>
-
-            <a href="#" target="_blank"><img src="assets/icons/social/icon-facebook.png" alt="Facebook"></a>
-
-            <a href="#" target="_blank"><img src="assets/icons/social/icon-email.png" alt="Email"></a>
+            <p>Tiago Guerreiro / A.k.a Soren | Portfolio &copy; <span id="currentYear"></span></p>
         </section>
     </footer>
     <script src="scripts/scripts.js"></script>

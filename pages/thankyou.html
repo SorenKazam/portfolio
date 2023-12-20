@@ -4,10 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank you!</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #3252C6;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        div.container {
+            background-color: white;
+            width: 90vw;
+            height: 500px;
+            max-width: 900px;
+            padding: 20px;
+            border-radius: 50px;
+            padding: 40px;
+            text-align: center;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 5px 5px 30px black;
+        }
+
+        div.container > img {
+            overflow: hidden;
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        a.buttonBack {
+            background-color: #365ce7;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Thank you for your email!</h1>
-    <p>I'll read it as soon as possible!</p>
-    <a href="../index.html">Go back</a>
+    <div class="container">
+        <img src="https://media4.giphy.com/media/44jJQXPAbvKfK/giphy.gif?cid=ecf05e473xavvq9liq9ed3m4wx2t47uwzf15158sx9if8pft&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Random Gif">
+        <h1>EMAIL SENT</h1>
+        <p>Thank you for your email, I'll read it as soon as possible!</p>
+        <a href="../index.html" class="buttonBack">Go back</a>
+    </div>
 </body>
 </html>
