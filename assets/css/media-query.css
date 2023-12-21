@@ -114,4 +114,39 @@
             cursor: default;
             border-radius: 0px;
     }
+
+    /* MAIN */
+    main#mainContent {
+        display: flex;
+        flex-flow: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* CONTAINERS */
+    div.container{
+        background-color: var(--color-content-bg);
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 0px 0px 10px 0px;
+        width: 80vw;
+        max-width: 900px;
+        border: 2px solid white;
+        border-radius: 15px;
+        box-shadow: 10px 10px 20px 0px black;
+    }
+
+    div.container > section.content > section.centerStuff {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
+        margin-bottom: 10px;
+        overflow-x: auto;
+    }
 }

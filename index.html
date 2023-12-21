@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media-query.css">
 </head>
-<body onresize="sizeChange()">
+<body>
     <noscript>
         <div class="noScriptContainer">
             <p>Please turn on the JavaScript for this page!</p>
         </div>
     </noscript>
+    <div class="errorMessageContainer">
+        <span id="errorMessage"></span>
+    </div>
     <header>
         <section class="portTitle">
             <img src="assets/images/pfp-full.jpg" alt="My profile photo!">
@@ -89,7 +92,7 @@
         
         <div class="container" id="techs">
             <section class="titles">
-                <h1>🛠️ Tech Stack</h1>
+                <h1>Tech Stack</h1>
                 <h2>This is some of the technologies I use daily!</h2>
             </section>
             <section class="content">
@@ -101,33 +104,32 @@
                     <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/tailwindcss/tailwindcss-plain.svg" alt="TAILWINDCSS">
                     <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/nodejs/nodejs-original.svg" alt="NODEJS">
                     <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/python/python-original.svg" alt="PYTHON">
-                    <img class="small" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/php/php-original.svg" alt="PHP">
+                    <img class="small" src="assets/images/logo-300-PHP.png" alt="PHP">
+                    <img id="html5" class="small" src="assets/images/logo-300-vscode.png" alt="VSCODE">
                 </section>
             </section>
         </div>
 
         <div class="container" id="contact">
             <section class="titles">
-                <h1>Reach me</h1>
+                <h1>Contact</h1>
             </section>
             <section class="content">
-                <p>My Links:</p>
                 <section class="centerStuff">
                     <a href="https://github.com/SorenKazam" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-github.png" alt="GitHub"></a>
                     <a href="https://www.linkedin.com/in/tiago-guerreiro-854a04123/" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-linkedin.png" alt="LinkedIn"></a>
                     <a href="https://www.threads.net/@tiaguel" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-threads.png" alt="Threads"></a>
                     <a href="https://www.instagram.com/tiaguel/" target="_blank"><img class="small" src="assets/icons/social-big/logo-300-instagram.png" alt="Instagram"></a>
                 </section>
-                <p>Or via form!</p>
                 <form action="https://formsubmit.co/6aa69898e77adc337eb8fa01b9c52774" method="POST" class="contact" autocomplete="on">
                     <input type="hidden" name="_subject" value="Email from portfolio">
                     <input type="hidden" name="_next" value="https://sorenkazam.github.io/portfolio/pages/thankyou.html">
                     <label for="inome">Name</label>
-                    <input type="text" name="name" id="iname" required autocomplete="name">
+                    <input type="text" name="name" id="iname" required autocomplete="name" placeholder="Your name...">
                     <label for="iemail">Email</label>
-                    <input type="email" name="email" id="iemail" required autocomplete="email">
+                    <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="Your email...">
                     <label for="imessage">Message</label>
-                    <textarea name="message" id="imessage" cols="30" rows="10" required></textarea>
+                    <textarea name="message" id="imessage" required placeholder="Type anything nice..."></textarea>
                     <section class="actionButtons">
                         <input type="reset" value="Reset" class="button button-reset">
                         <button type="submit" class="button button-primary">Send</button>
