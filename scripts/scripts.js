@@ -8,6 +8,7 @@ var miniProfileInfoName = document.getElementById('miniProfileInfoName')
 var body = this.document.getElementsByTagName('BODY')[0]
 var errorMessage = document.querySelector('span#errorMessage')
 var errorMessageContainer = document.querySelector('div.errorMessageContainer')
+var goTopBtn = document.querySelector('button#goTopBtn')
 yearSpan.innerHTML = date
 
 dynamicAge.innerHTML = atualAge
@@ -22,8 +23,17 @@ window.addEventListener('scroll', function(){
         miniProfileInfoImage.style.display = 'none'
         miniProfileInfoName.style.display = 'none'
     }
-})
 
+    if (scrollDistance > 770){
+        goTopBtn.style.display = 'inline-block'
+        // go top btn
+        goTopBtn.addEventListener('click', function(){
+            document.documentElement.scrollTop = 0
+        })
+    } else {
+        goTopBtn.style.display = 'none'
+    }
+})
 
 // functions for the navbar menu
 function clickMenu() {
@@ -40,7 +50,7 @@ function clickMenu() {
 
 // when the window change sizes!
 window.addEventListener('resize', function(){
-    console.log('Screen Size:' + window.innerWidth)
+    console.log('Screen Size Changed:' + window.innerWidth)
     if (window.innerWidth >= 992) {
         items.style.display = 'block'
     } else {

@@ -448,6 +448,31 @@ div.container > section.content > form.contact > .actionButtons > .button-reset 
     color: white;
 }
 
+/* ---------- GO TOP BTN ---------- */
+button#goTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--color-navbar);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.404);
+}
+
+button#goTopBtn:hover {
+    border-radius: 25px;
+    padding: 25px;
+    font-size: 20px;
+}
+
 /* ---------- FOOTER ---------- */
 footer {
     background-color: var(--color-background);
