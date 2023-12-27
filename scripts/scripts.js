@@ -33,17 +33,17 @@ projectButtons.forEach(function (button) {
 
         switch(projectId) {
             case 'projectOne':
-                projectTitle.textContent = 'Project Android Website';
+                projectTitle.textContent = 'Project Android Website'
                 projectImage.src = 'assets/images/projects/gifs/project-android.gif';
                 projectDisc.textContent = 'Website created as part of an youtube online course.';
                 projectTechs.textContent = 'HTML5, CSS3';
                 break;
 
             case 'projectTwo':
-                projectTitle.textContent = 'Carro 2 meu puto';
-                projectImage.src = 'https://th.bing.com/th/id/R.1f419127fd35ae781eb09c459cf3896c?rik=lhVinW%2fFsTpVfQ&riu=http%3a%2f%2fwww.hdcarwallpapers.com%2fwalls%2flamborghini_aventador_s_2017_4k_3-HD.jpg&ehk=9nTUy5wLXBP4G73ubIogzbBfRBbAaB9%2beRhUpHwJj6o%3d&risl=1&pid=ImgRaw&r=0';
-                projectDisc.textContent = 'Isto é um carro bue foda 2';
-                projectTechs.textContent = 'HTML5, CSS3, JS 2';
+                projectTitle.textContent = 'Project Login Page';
+                projectImage.src = 'assets/images/projects/prints/project-login-page.png';
+                projectDisc.textContent = 'Website created as part of an youtube online course.';
+                projectTechs.textContent = 'HTML5, CSS3';
                 break;
 
             default:
