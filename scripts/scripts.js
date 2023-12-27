@@ -10,8 +10,52 @@ var errorMessage = document.querySelector('span#errorMessage')
 var errorMessageContainer = document.querySelector('div.errorMessageContainer')
 var goTopBtn = document.querySelector('button#goTopBtn')
 yearSpan.innerHTML = date
-
 dynamicAge.innerHTML = atualAge
+
+var projectButtons = document.querySelectorAll('.showProject')
+
+projectButtons.forEach(function (button) {
+    button.addEventListener('click', function() {
+        var projectContainer = document.getElementById('project-container');
+        var projectImage = document.getElementById('project-image');
+        var projectTitle = document.getElementById('project-title');
+        var projectDisc = document.getElementById('project-disc');
+        var projectTechs = document.getElementById('project-techs');
+        var closeButton = document.getElementById('btn-project-close');
+
+        projectContainer.style.display = 'flex'
+
+        closeButton.addEventListener('click', function(){
+            projectContainer.style.display = 'none'
+        })
+
+        var projectId = button.id
+
+        switch(projectId) {
+            case 'projectOne':
+                projectTitle.textContent = 'Project Android Website';
+                projectImage.src = 'assets/images/projects/gifs/project-android.gif';
+                projectDisc.textContent = 'Website created as part of an youtube online course.';
+                projectTechs.textContent = 'HTML5, CSS3';
+                break;
+
+            case 'projectTwo':
+                projectTitle.textContent = 'Carro 2 meu puto';
+                projectImage.src = 'https://th.bing.com/th/id/R.1f419127fd35ae781eb09c459cf3896c?rik=lhVinW%2fFsTpVfQ&riu=http%3a%2f%2fwww.hdcarwallpapers.com%2fwalls%2flamborghini_aventador_s_2017_4k_3-HD.jpg&ehk=9nTUy5wLXBP4G73ubIogzbBfRBbAaB9%2beRhUpHwJj6o%3d&risl=1&pid=ImgRaw&r=0';
+                projectDisc.textContent = 'Isto é um carro bue foda 2';
+                projectTechs.textContent = 'HTML5, CSS3, JS 2';
+                break;
+
+            default:
+                projectTitle.textContent = 'Error';
+                projectImage.src = 'https://media4.giphy.com/media/K6VhXtbgCXqQU/giphy.gif?cid=ecf05e47ozqip4aix508tp7k77snyuqtvwtq32zbast8rzh4&ep=v1_gifs_search&rid=giphy.gif&ct=g';
+                projectDisc.textContent = 'Project not found!';
+                projectTechs.textContent = '';
+                break;
+        }
+
+    })
+})
 
 // show the miniprofile if there is a scroll
 window.addEventListener('scroll', function(){

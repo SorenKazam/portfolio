@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/print.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media-query.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <noscript>
@@ -22,7 +23,7 @@
     </div>
     <button id="goTopBtn" class="button">Top</button>
     <header>
-        <section class="portTitle">
+        <section class="portTitle" id="home">
             <img src="assets/images/pfp-full.jpg" alt="My profile photo!">
             <section class="info">
                 <h1>TIAGO GUERREIRO</h1>
@@ -41,57 +42,31 @@
         <menu id="items">
             <ul class="list">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#links">Links</a></li>
             </ul>
         </menu>
     </nav>
     <main id="mainContent">
-        <!-- 
-            Experiência:
-            Forneça detalhes específicos sobre os projetos em que trabalhou como freelancer, destacando conquistas e tecnologias usadas.
-            Se possível, adicione resultados mensuráveis (por exemplo, "Aumentou a eficiência do sistema em X%").
-            
-            Projetos:
-            Certifique-se de incluir uma variedade de projetos que destaquem diferentes habilidades e tecnologias que você domina.
-            Adicione uma breve descrição dos desafios enfrentados em cada projeto e como você os superou.
-            
-            Educação:
-            Certifique-se de incluir datas para seus cursos e certificações.
-            Considere remover o curso da escola secundária, a menos que tenha relevância direta para a sua carreira atual.
-        
-            Contato:
-            Certifique-se de que todos os seus links (Portfolio, GitHub, Contato) estejam corretos e funcionando.
-            
-            Adaptabilidade:
-            Considere tornar seu portfólio mais adaptável, para que você possa facilmente adicionar ou remover projetos à medida que ganha mais experiência.
-         -->
-         <div class="container" id="welcome">
+         <div class="container" id="about">
             <section class="titles">
-                <h1>Welcome</h1>
-                <h2>This is my Portfolio!</h2>
+                <h1>About Me</h1>
+                <h2>my source code</h2>
             </section>
             <section class="content">
-                <p>🚀 Passionate Developer | Full-Stack Enthusiast</p>
-                <p>Hello there! I'm a 24-year-old developer from Portugal with an unbridled passion for technology. Currently, I'm wholeheartedly dedicated to following a full-stack development roadmap.</p>
-                <img src="assets/images/me/clayme1.jpeg" alt="me in claymotion">
+                <img src="assets/images/pfp-full-square.jpg" alt="">
+                <p>Hello world! and welcome to my portfolio! My name is Tiago Guerreiro, but you can call me Soren and I'm <span id="dynamicAge"></span> years old.</p>
+                <p>I'm from Portugal, yes, home of Cristiano Ronaldo!</p>
+                <img src="https://media4.giphy.com/media/1CRLn4g4MiIyA/giphy.gif?cid=ecf05e47hj79eixbr8c7h2uqn26u9dku11cmfsxg38opfxqq&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="CR7 GIF">
+                <p>I'm currently following a full-stack web development roadmap! So I can make cool and good looking websites.</p>
+                <p>My softskills are: good communication, love for challanges and problem solving, criativity, empathy, colaboration and flexibility.</p>
+                <p>Looking for my first job opportunity! If you are hiring, please contact me <a href="#contact">[here]</a>.</p>
             </section>
         </div>
 
-        <div class="container" id="about">
-            <section class="titles">
-                <h1>About me</h1>
-                <h2>Some details about me</h2>
-            </section>
-            <section class="content">
-                <p>Real name: Tiago Guerreiro</p>
-                <p>Location: Portugal</p>
-                <p>Age: <span id="dynamicAge"></span></p>
-            </section>
-        </div>
-        
-        <div class="container" id="techs">
+        <div class="container" id="tools">
             <section class="titles">
                 <h1>Tech Stack</h1>
                 <h2>This is some of the technologies I use daily!</h2>
@@ -111,9 +86,44 @@
             </section>
         </div>
 
+        <div class="container" id="projects">
+            <section class="titles">
+                <h1>Projects</h1>
+                <h2>Some work I have done</h2>
+            </section>
+            <section class="content">
+                <!-- Project preview modal -->
+                <div id="project-container">
+                    <div class="project-content">
+                        <span id="btn-project-close">&times;</span>
+                        <img id="project-image" src="" alt="">
+                        <h2 id="project-title"></h2>
+                        <p id="project-disc"></p>
+                        <p id="project-techs"></p>
+                        <section class="project-links">
+                            <a href="">Github</a>
+                            <a href="">Pages</a>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <section class="centerStuff">
+                    
+                    <div class="project-preview">
+                        <img id="project-preview-img-one" class="project-preview-img" src="assets/images/projects/prints/project-android.png" alt="">
+                        <h2>Project Android website</h2>
+                        <button id="projectOne" class="button showProject">More info</button>
+                    </div>
+
+                </section>
+            </section>
+        </div>
+
         <div class="container" id="contact">
             <section class="titles">
                 <h1>Contact</h1>
+                <h2>Feel free to reach me!</h2>
             </section>
             <section class="content">
                 <section class="centerStuff">
@@ -141,7 +151,10 @@
     </main>
     <footer>
         <section class="information">
-            <p>Tiago Guerreiro / A.k.a Soren | Portfolio &copy; <span id="currentYear"></span></p>
+            <p>Social: <a href="">Instagram</a></p>
+            <!-- instagram, pinterest, linkedin, github -->
+            <p>&copy; <span id="currentYear"></span> Tiago Guerreiro / A.k.a Soren, All rights reserved.</p>
+            <p>Made with ♥️ in Portugal, by ME</p>
         </section>
     </footer>
     <script src="scripts/scripts.js"></script>
