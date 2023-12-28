@@ -1,3 +1,5 @@
+import projects from "./projectList.js";
+
 var birthday = 1999
 var date = new Date().getFullYear()
 var yearSpan = document.getElementById('currentYear')
@@ -5,56 +7,59 @@ var dynamicAge = document.querySelector('span#dynamicAge')
 var atualAge = date - birthday
 var miniProfileInfoImage = document.getElementById('miniProfileInfoImage')
 var miniProfileInfoName = document.getElementById('miniProfileInfoName')
-var body = this.document.getElementsByTagName('BODY')[0]
 var errorMessage = document.querySelector('span#errorMessage')
 var errorMessageContainer = document.querySelector('div.errorMessageContainer')
 var goTopBtn = document.querySelector('button#goTopBtn')
 yearSpan.innerHTML = date
 dynamicAge.innerHTML = atualAge
 
-var projectButtons = document.querySelectorAll('.showProject')
+// projects list handler
+var projectContainer = document.querySelector('div.projects-container')
+projects.forEach(function(project){
 
-projectButtons.forEach(function (button) {
-    button.addEventListener('click', function() {
-        var projectContainer = document.getElementById('project-container');
-        var projectImage = document.getElementById('project-image');
-        var projectTitle = document.getElementById('project-title');
-        var projectDisc = document.getElementById('project-disc');
-        var projectTechs = document.getElementById('project-techs');
-        var closeButton = document.getElementById('btn-project-close');
+    // create the main div for the project
+    var projectPreview = document.createElement('div')
+    projectPreview.className = 'project-preview'
 
-        projectContainer.style.display = 'flex'
+    // create the img element for the project image
+    var projectImage = document.createElement('img')
+    projectImage.id = 'project-preview-img'
+    projectImage.className = 'project-preview-img'
+    projectImage.src = project.imgLink
+    projectImage.alt = 'Project image'
 
-        closeButton.addEventListener('click', function(){
-            projectContainer.style.display = 'none'
-        })
+    // create the project title
+    var projectTitle = document.createElement('h2')
+    projectTitle.id = 'project-title'
+    projectTitle.textContent = project.title
 
-        var projectId = button.id
+    // create the project buttons holder
+    var projectButtonsHolder = document.createElement('section')
+    projectButtonsHolder.className = 'project-button-holder'
 
-        switch(projectId) {
-            case 'projectOne':
-                projectTitle.textContent = 'Project Android Website'
-                projectImage.src = 'assets/images/projects/gifs/project-android.gif';
-                projectDisc.textContent = 'Website created as part of an youtube online course.';
-                projectTechs.textContent = 'HTML5, CSS3';
-                break;
+    // create the project github button
+    var projectGithubButton = document.createElement('a')
+    projectGithubButton.id = 'projectBtn' + project.id
+    projectGithubButton.className = 'button projectLink'
+    projectGithubButton.textContent = 'Github'
+    projectGithubButton.href = project.linkGithub
+    projectGithubButton.target = '_blank'
 
-            case 'projectTwo':
-                projectTitle.textContent = 'Project Login Page';
-                projectImage.src = 'assets/images/projects/prints/project-login-page.png';
-                projectDisc.textContent = 'Website created as part of an youtube online course.';
-                projectTechs.textContent = 'HTML5, CSS3';
-                break;
+    // create the project online button
+    var projectOnlineButton = document.createElement('a')
+    projectOnlineButton.id = 'projectBtn' + project.id
+    projectOnlineButton.className = 'button projectLink'
+    projectOnlineButton.textContent = 'Online'
+    projectOnlineButton.href = project.linkOnline
+    projectOnlineButton.target = '_blank'
 
-            default:
-                projectTitle.textContent = 'Error';
-                projectImage.src = 'https://media4.giphy.com/media/K6VhXtbgCXqQU/giphy.gif?cid=ecf05e47ozqip4aix508tp7k77snyuqtvwtq32zbast8rzh4&ep=v1_gifs_search&rid=giphy.gif&ct=g';
-                projectDisc.textContent = 'Project not found!';
-                projectTechs.textContent = '';
-                break;
-        }
-
-    })
+    // insert each element into the respective parent element
+    projectContainer.appendChild(projectPreview)
+    projectPreview.appendChild(projectImage)
+    projectPreview.appendChild(projectTitle)
+    projectPreview.appendChild(projectButtonsHolder)
+    projectButtonsHolder.appendChild(projectGithubButton)
+    projectButtonsHolder.appendChild(projectOnlineButton)
 })
 
 // show the miniprofile if there is a scroll
@@ -79,8 +84,9 @@ window.addEventListener('scroll', function(){
     }
 })
 
-// functions for the navbar menu
-function clickMenu() {
+// mini profile trigger dropdown menu
+var miniProfile = document.querySelector('section#miniProfile')
+miniProfile.addEventListener('click', function () {
     if (window.innerWidth < 990){
         var items = document.getElementById('items')
     
@@ -90,7 +96,8 @@ function clickMenu() {
             items.style.display = 'block'
         }
     }
-}
+
+})
 
 // when the window change sizes!
 window.addEventListener('resize', function(){
